@@ -1,0 +1,20 @@
+# Java / Spring Boot
+backend/target/
+backend/.mvn/
+*.class
+*.jar
+*.war
+*.log
+HELP.md
+
+# React / Node
+frontend/node_modules/
+frontend/dist/
+frontend/.env.local
+
+# VS Code
+.vscode/settings.json
+
+# Environment / secrets
+.env
+*.env
