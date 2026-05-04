@@ -8,6 +8,7 @@ export function AuthProvider({ children }) {
     JSON.parse(sessionStorage.getItem('user') || 'null')
   )
 
+  console.log('AuthProvider token on render:', token)
   const login = (authResponse) => {
     setToken(authResponse.token)
     setUser({ name: authResponse.name, email: authResponse.email })

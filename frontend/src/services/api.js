@@ -47,4 +47,10 @@ export const dashboardService = {
   get: () => api.get('/dashboard'),
 }
 
+export const categoryService = {
+  getAll: () => api.get('/categories'),
+  create: (data) => api.post('/categories', data),
+  delete: (id) => api.delete(`/categories/${id}`),
+}
+
 export default api

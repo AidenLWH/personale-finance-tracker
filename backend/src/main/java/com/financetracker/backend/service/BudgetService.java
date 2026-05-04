@@ -33,10 +33,10 @@ public class BudgetService {
     }
 
     private BudgetResponse toResponse(Budget b) {
-        User user = getCurrentUser();
-        BigDecimal spent = transactionRepository.sumAmountByUserAndTypeAndMonth(
-                user, TransactionType.EXPENSE, b.getMonth(), b.getYear()
-        );
+    User user = getCurrentUser();
+    BigDecimal spent = transactionRepository.sumAmountByUserAndTypeAndMonthAndCategory(
+            user, TransactionType.EXPENSE, b.getMonth(), b.getYear(), b.getCategory()
+    );
         return BudgetResponse.builder()
                 .id(b.getId())
                 .amount(b.getAmount())
